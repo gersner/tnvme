@@ -72,7 +72,7 @@ FileSystem::SetRootDumpDir(string dir)
             return false;
         }
     } catch (exception &exc) {
-        LOG_ERR("boost::filesystem exception");
+        LOG_ERR("boost::filesystem exception %s", exc.what());
         return false;
     }
 }
